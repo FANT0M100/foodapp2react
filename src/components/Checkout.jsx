@@ -23,7 +23,7 @@ const Checkout = () => {
     event.preventDefault();
 
     const fd = new FormData(event.target);
-    const cstumerData = Object.entries(fd.entries());
+    const customerData = Object.fromEntries(fd.entries());
 
     fetch("http://localhost:3000/orders", {
       method: "POST",
@@ -33,7 +33,7 @@ const Checkout = () => {
       body: JSON.stringify({
         order: {
           items: cartCtx.items,
-          costumer: cstumerData,
+          customer: customerData,
         },
       }),
     });
