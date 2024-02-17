@@ -1,4 +1,5 @@
 import logoImg from "../assets/logo.jpg";
+import Buttons from "./UI/Buttons";
 
 const Header = () => {
   return (
@@ -9,7 +10,7 @@ const Header = () => {
       </div>
 
       <nav>
-        <button>Cart (0)</button>
+        <Buttons textOnly>Cart (0)</Buttons>
       </nav>
     </header>
   );
